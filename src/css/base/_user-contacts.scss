@@ -1,0 +1,46 @@
+.user-contacts {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__avatar {
+        margin-right: 48px;
+
+        img {
+            border: 2px solid #fff;
+            border-radius: 50%;
+            outline: 5px solid #85B357;
+        }
+    }
+
+    &__contacts {
+        color: #505050;
+        font-size: 16px;
+        line-height: 1.5;
+        @media(min-width: $xlg) {
+            columns: 2;
+        }
+
+        p {
+            align-items: center;
+            display: flex;
+            margin: 0;
+            overflow: hidden;
+            padding: 12px 0;
+
+            svg {
+                fill: #85B357;
+                height: 24px;
+                margin-right: 12px;
+                width: 24px;
+            }
+
+            a {
+                color: inherit;
+                @include hover {
+                    color: var(--brand_light_green);
+                }
+            }
+        }
+    }
+}

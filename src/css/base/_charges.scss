@@ -1,0 +1,73 @@
+.charges {
+    &__form-title {
+        align-items: center;
+        color: var(--secondary);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        small {
+            font-size: 11px;
+
+            &.red {
+                color: #C4334D;
+            }
+        }
+    }
+
+    &__form {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .input {
+            flex-grow: 1;
+            //ширина кнопки и гэп
+            @media(min-width: $sm) {
+                flex-basis: calc(100% - 198px - 16px);
+            }
+            @media(min-width: $hd) and (max-width: $fhd - 1px) {
+                flex-basis: 100%;
+            }
+        }
+
+        .button {
+            flex-grow: 1;
+            margin-left: auto;
+            @media(min-width: $sm) {
+                max-width: 198px;
+            }
+            @media(min-width: $hd) and (max-width: $fhd - 1px) {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.charge {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        color: var(--secondary);
+        margin-bottom: 0;
+    }
+
+    &__value {
+        font-size: 24px;
+        line-height: 1.66666;
+
+        &--big {
+            font-size: 36px;
+            line-height: 1.33333;
+        }
+
+        &.green {
+            color: var(--brand_green);
+        }
+    }
+}

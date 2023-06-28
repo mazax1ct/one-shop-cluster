@@ -1,0 +1,23 @@
+.tabs-menu {
+    max-width: 100%;
+    overflow-x: auto;
+
+    &__list {
+        @include list-reset;
+        align-items: center;
+        display: inline-flex;
+        gap: 8px;
+    }
+
+    &__item {}
+
+    .button {
+        background-color: #E9E9E9;
+        color: var(--darker);
+
+        &.is-active {
+            background-color: var(--brand_green);
+            color: #fff;
+        }
+    }
+}

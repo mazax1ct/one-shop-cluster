@@ -1,0 +1,54 @@
+.qualify-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.qualify-card {
+    background-color: #F6F7F9;
+    border: 1px solid var(--light_grey);
+    border-radius: 12px;
+    min-height: 100px;
+    min-width: 210px;
+    padding: 20px 24px;
+    width: calc((100% - 8px * 3) / 4);
+
+    &.green {
+        background-color: #B8F3C9;
+        border-color: #B1E9C1;
+
+        .qualify-card__title {
+            color: #3E7B40;
+        }
+
+        .qualify-card__value {
+            color: #2B5634;
+        }
+    }
+
+    &.yellow {
+        background-color: #F3F1B8;
+        border-color: #E9E8B1;
+
+        .qualify-card__title {
+            color: #7B793E;
+        }
+
+        .qualify-card__value {
+            color: #56552B;
+        }
+    }
+
+    &__title {
+        color: #64788C;
+        font-size: 13px;
+        line-height: 1.53846;
+        margin: 0;
+    }
+
+    &__value {
+        font-size: 24px;
+        line-height: 1.66666;
+        margin: 0;
+    }
+}

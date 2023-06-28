@@ -1,0 +1,187 @@
+.input {
+    position: relative;
+    z-index: auto;
+
+    &__label {
+        display: block;
+        position: relative;
+        z-index: auto;
+    }
+
+    &__input {
+        border-radius: 12px;
+        border: 1px solid var(--light_grey);
+        background-color: #fff;
+        color: inherit;
+        font-size: 14px;
+        font-weight: 400;
+        height: 48px;
+        line-height: 1.6;
+        min-width: 0;
+        padding: 0 16px;
+        transition: border-color 0.3s;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            color: var(--secondary);
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: var(--secondary);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--secondary);
+            opacity: 1;
+        }
+
+        &:focus {
+            border-color: var(--darker);
+        }
+
+        &.disabled,
+        &:disabled {
+            opacity: 0.6;
+        }
+
+        &.error {
+            border-color: var(--red);
+        }
+    }
+}
+
+.textarea {
+    border: 2px solid rgba(#fff, 0.7);
+    border-radius: 2px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 12px;
+    transition: border-color 0.3s;
+    width: 100%;
+
+    &:focus {
+        border-color: #fff;
+    }
+    @include hover {
+        border-color: #fff;
+    }
+
+    &.error {
+        border-color: #D43C38;
+        color: #D43C38;
+
+        &:focus {
+            border-color: #D43C38;
+            color: rgba(#D43C38, 0.3);
+
+            &::-webkit-input-placeholder {
+                color: rgba(#D43C38, 0.3);
+            }
+
+            &::-moz-placeholder {
+                color: rgba(#D43C38, 0.3);
+            }
+
+            &:-ms-input-placeholder {
+                color: rgba(#D43C38, 0.3);
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color: #D43C38;
+        }
+
+        &::-moz-placeholder {
+            color: #D43C38;
+        }
+
+        &:-ms-input-placeholder {
+            color: #D43C38;
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: rgba(#fff, 0.7);
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: rgba(#fff, 0.7);
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: rgba(#fff, 0.7);
+        opacity: 1;
+    }
+
+    &:focus::-webkit-input-placeholder {
+        color: rgba(#fff, 0.3);
+        opacity: 1;
+    }
+
+    &:focus::-moz-placeholder {
+        color: rgba(#fff, 0.3);
+        opacity: 1;
+    }
+
+    &:focus:-ms-input-placeholder {
+        color: rgba(#fff, 0.3);
+        opacity: 1;
+    }
+
+    &.disabled,
+    &:disabled {
+        border-color: rgba(#fff, 0.3);
+        cursor: default;
+        pointer-events: none;
+        @include hover {
+            border-color: rgba(#fff, 0.3);
+        }
+
+        &::-webkit-input-placeholder {
+            color: rgba(#fff, 0.3);
+        }
+
+        &::-moz-placeholder {
+            color: rgba(#fff, 0.3);
+        }
+
+        &:-ms-input-placeholder {
+            color: rgba(#fff, 0.3);
+        }
+    }
+}
+
+input,
+textarea {
+    &:focus {
+        outline: 0;
+    }
+}
+
+.textarea {
+    height: 130px;
+    resize: none;
+}
+
+.input-error {
+    border-radius: 12px;
+    background-color: rgba(144, 62, 62, 0.1);
+    color: var(--red);
+    font-size: 12px;
+    line-height: 1.33333;
+    padding: 12px;
+
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}

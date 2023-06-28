@@ -1,0 +1,49 @@
+.button {
+    align-items: center;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.71428;
+    padding: 12px 32px;
+    text-decoration: none;
+    transition: opacity 0.3s, border-color 0.3s, color 0.3s;
+    user-select: none;
+    white-space: nowrap;
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        cursor: default;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    &:not(.disabled),
+    &:not(:disabled),
+    &:not([data-disabled]) {
+        @include hover {
+            opacity: 0.9;
+        }
+    }
+
+    &--h_36 {
+        height: 36px;
+    }
+
+    &--h_48 {
+        height: 48px;
+    }
+
+    &--type_1 {
+        background-color: var(--darker);
+    }
+
+    &--type_2 {
+        background-color: var(--brand_green);
+    }
+}

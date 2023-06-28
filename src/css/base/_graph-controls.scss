@@ -1,0 +1,44 @@
+.graph {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    img {
+        display: block;
+    }
+}
+
+.graph-controls {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    @media(min-width: $md) {
+        justify-content: center;
+    }
+}
+
+.graph-legend {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    @media(min-width: $md) {
+        margin-left: auto;
+    }
+
+    &__item {
+        align-items: center;
+        border-radius: 12px;
+        color: #fff;
+        display: flex;
+        height: 36px;
+        justify-content: center;
+        padding: 6px 12px;
+        min-width: 116px;
+    }
+}

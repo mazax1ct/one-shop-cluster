@@ -1,0 +1,20 @@
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+
+    div {
+        border-radius: 4px;
+        background-color: #F0F0F0;
+        height: 16px;
+        width: 16px;
+
+        &.blue {
+            background-color: var(--blue);
+        }
+
+        &.green {
+            background-color: var(--brand_green);
+        }
+    }
+}

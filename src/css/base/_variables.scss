@@ -1,0 +1,26 @@
+$sm: 768px;
+$md: 1024px;
+$hd: 1280px;
+$lg: 1400px;
+$xlg: 1600px;
+$fhd: 1900px;
+
+:root {
+    --body_bg: #FAFAFA;
+    --box_bg: #fff;
+    --darker: #212529;
+    --secondary: #868E96;
+    --brand_green: #53863C;
+    --brand_light_green: #8BB187;
+    --light_grey: #EDEDED;
+    --red: #903E3E;
+    --blue: #3E5090;
+    --green: #3D8F4A;
+    --yellow: #908D3E;
+    --main_font_family: 'Roboto', Arial, sans-serif;
+    --shadow: 0 4px 8px 0 rgba(0,0,0, 0.04);
+    --base_gap: 12px;
+    @media(min-width: $lg) {
+        --base_gap: 24px;
+    }
+}
