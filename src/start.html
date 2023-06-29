@@ -20,10 +20,23 @@
 <body>
     //= template/sprite.html
 
+    <header class="header">
+        <div class="header__container">
+            <a class="header__back" href="#">
+                <svg aria-hidden="true">
+                    <use xlink:href="#arrow_left" />
+                </svg>
+                <span>Вернуться на основной сайт</span>
+            </a>
+
+            <div class="header__logo">
+                Аренда серверных<br> мощностей
+            </div>
+        </div>
+    </header>
+
     <main class="content" style="display: flex">
         <div class="start">
-            <p class="start__intro">Аренда серверных мощностей</p>
-
             <p class="start__title">Создайте свой Облачный сервер<br> (Вычислительный кластер) с ПО Пользователя</p>
 
             <label class="checkbox">

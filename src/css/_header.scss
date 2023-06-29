@@ -50,19 +50,18 @@
     &__logo {
         @include active-area;
         color: var(--darker);
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 300;
         line-height: 1;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
         z-index: 1;
 
-        span {
-            font-size: 14px;
-            font-weight: 300;
-            @media(max-width: $fhd - 1px) {
+        br {
+            @media(min-width: $xlg) {
                 display: none;
             }
         }
