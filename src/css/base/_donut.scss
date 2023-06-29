@@ -1,3 +1,28 @@
+.donuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 12px;
+    justify-content: space-around;
+    @media(min-width: $hd) {
+        flex-wrap: nowrap;
+    }
+
+    & > div {
+        @media(max-width: $sm - 1px) {
+            width: 100%;
+        }
+
+        &:nth-child(1) {
+            @media(min-width: $sm) and (max-width: $md - 1px) {
+                width: 100%;
+            }
+        }
+        @media(min-width: $hd) {
+            width: calc(100% / 4 - 12px);
+        }
+    }
+}
+
 .donut {
     --size: 264px;
     width: var(--size);
@@ -7,16 +32,64 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @media(min-width: $hd) {
+        height: 0;
+        padding-bottom: 100%;
+        width: 100%;
+    }
+
+    img {
+        height: 48px;
+        left: 8px;
+        position: absolute;
+        top: 8px;
+        width: 48px;
+        z-index: 1;
+        @media(min-width: $hd) {
+            left: -8px;
+            top: -8px;
+        }
+        @media(min-width: $hd) and (max-width: $fhd - 1px) {
+            height: 32px;
+            width: 32px;
+        }
+    }
 
     &__hole {
+        align-items: center;
+        display: flex;
+        justify-content: center;
         width: calc(var(--size) - 40px);
         height: calc(var(--size) - 40px);
         border-radius: 50%;
         background: #fff;
+        @media(min-width: $hd) {
+            height: calc(100% - 40px);
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 40px);
+        }
+    }
+
+    &__hole-inner {
         align-items: center;
         display: flex;
         gap: 8px;
         justify-content: center;
+        @media(min-width: $hd) {
+            transform: scale(0.4);
+        }
+        @media(min-width: $xlg) {
+            transform: scale(0.6);
+        }
+        @media(min-width: $fhd) {
+            transform: scale(0.7);
+        }
     }
 
     &__value {
@@ -49,10 +122,34 @@
         font-size: 13px;
         font-weight: 500;
         line-height: 1;
+        white-space: nowrap;
     }
 
     &--small {
         --size: 180px;
+        @media(min-width: $hd) {
+            padding-bottom: 80%;
+            width: 80%;
+        }
+
+        .donut__hole {
+            @media(min-width: $hd) {
+                height: calc(100% - 30px);
+                width: calc(100% - 30px);
+            }
+        }
+
+        .donut__hole-inner {
+            @media(min-width: $hd) {
+                transform: scale(0.5);
+            }
+            @media(min-width: $xlg) {
+                transform: scale(0.7);
+            }
+            @media(min-width: $fhd) {
+                transform: scale(0.8);
+            }
+        }
 
         .donut__value {
             font-size: 40px;
@@ -105,13 +202,6 @@
             background-color: var(--yellow);
         }
     }
-}
-
-.donuts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px 12px;
-    justify-content: space-around;
 }
 
 .donut-title {
