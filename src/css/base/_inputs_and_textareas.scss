@@ -185,3 +185,20 @@ textarea {
         margin-bottom: 8px;
     }
 }
+
+.input-success {
+    border-radius: 12px;
+    background-color: rgba(83, 134, 60, 0.1);
+    color: var(--brand_green);
+    font-size: 12px;
+    line-height: 1.33333;
+    padding: 12px;
+
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
