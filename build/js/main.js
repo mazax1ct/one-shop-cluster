@@ -1,3 +1,8 @@
+$.fancybox.defaults.hash = false;
+$.fancybox.defaults.smallBtn = false;
+$.fancybox.defaults.toolbar = false;
+$.fancybox.defaults.touch = false;
+
 //меню
 $(document).on('click', '.js-menu-opener', function () {
   $('body').css('overflow', 'hidden');

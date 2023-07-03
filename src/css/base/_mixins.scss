@@ -1,5 +1,5 @@
 @mixin scrollbar {
-    scrollbar-color: rgba(#fff, 0.4) transparent;
+    scrollbar-color: var(--secondary) transparent;
     scrollbar-width: thin;
 
     &::-webkit-scrollbar {
@@ -9,7 +9,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background: rgba(#fff, 0.4);
+        background: var(--secondary);
         border-radius: 2px;
         height: 4px;
         width: 4px;

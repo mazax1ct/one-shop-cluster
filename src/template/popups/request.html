@@ -1,0 +1,79 @@
+<div id="request" class="box">
+    <div class="box__title-block">
+        <p class="box__title">Запрос на вывод средств с кластерного счета</p>
+    </div>
+    <div class="request">
+        <p><b>Обратите внимание!</b></p>
+
+        <p>Вывод возможен на сирби счет, Вашу банковскую карту, а также на банковскую карту родственника или счет ИП вашего родственника (по заявлению).</p>
+
+        <ul>
+            <li>в случае вывода на внешние счета Компания удерживает 5% комиссию банка. Налог на данный перевод вне нашей компетенции.</li>
+            <li>в случае вывода на сирби счет комиссия не взимается.</li>
+        </ul>
+
+        <p class="red">Учтите, что после оформления заявки указанная вами сумма будет заблокирована до момента рассмотрения заявки.</p>
+
+        <form action="">
+            <p class="field-title"><b>Сумма для вывода (минимум 1 000 рублей)</b></p>
+
+            <label class="input">
+                <input class="input__input" type="text" value="50 000">
+            </label>
+
+            <p class="note red">Фактическая сумма вывода составит 47 500 рублей за вычетом 5% комиссии банка</p>
+
+            <p class="red">Внимание! Система автоматически вычтет 5% для уплаты комиссии банка, для вывода будет доступна сумма после вычета 5%.</p>
+
+            <p class="field-title"><b>Способ вывода</b></p>
+
+            <label class="select">
+                <select>
+                    <option value="">На свою банковскую карту</option>
+                    <option value="">На счёт ИП</option>
+                </select>
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#check_16" />
+                    </svg>
+                </span>
+                <span class="checkbox__text"><b>Я согласен с правильностью заполненных данных в разделе <a href="#">Реквизиты</a></b></span>
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#check_16" />
+                    </svg>
+                </span>
+                <span class="checkbox__text"><b>Я согласен с <a href="#">договором оферты</a></b></span>
+            </label>
+
+            <div class="request__buttons-block">
+                <button class="button button--h_48 button--type_5" type="button" onclick="$.fancybox.close();">Отмена</button>
+                <button class="button button--h_48 button--type_2" type="submit" data-fancybox="request_error" data-src="#request_error">Отправить запрос</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="request_error" class="box">
+    <div class="box__title-block">
+        <p class="box__title">Ошибка запроса на вывод средств с кластерного счета</p>
+    </div>
+    <div class="request">
+
+        <p class="red">Произошла ошибка!</p>
+
+        <p class="red">Вы что-то сделали неправильно!</p>
+
+        <div class="request__buttons-block">
+            <button class="button button--h_48 button--type_2" type="button" onclick="$.fancybox.close();">Понятно</button>
+        </div>
+    </div>
+</div>

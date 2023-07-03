@@ -10,7 +10,7 @@ body {
     color: var(--darker);
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: 16px;
     font-family: var(--main_font_family);
     font-weight: 400;
     line-height: 1.42857;
@@ -156,7 +156,7 @@ table {
     }
 
     .big {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.25;
     }
 }
@@ -179,7 +179,7 @@ table {
         }
     }
     @media(max-width: $sm) {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
@@ -198,7 +198,7 @@ table {
 }
 
 .red {
-    color: var(--red);
+    color: var(--brand_red);
 }
 
 .blue {
@@ -219,4 +219,16 @@ table {
 
 .text-center {
     text-align: center;
+}
+
+.note {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.field-title {
+    display: block;
+    color: var(--secondary);
+    margin-bottom: 8px;
 }

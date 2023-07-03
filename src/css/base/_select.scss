@@ -1,0 +1,50 @@
+.select {
+    background-color: #fff;
+    border: 1px solid var(--light_grey);
+    border-radius: 12px;
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    position: relative;
+    width: 100%;
+
+    &.disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+
+    select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        height: 46px;
+        padding: 0 44px 0 14px;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            border-color: var(--light_grey);
+            outline: 1px dotted inherit;
+        }
+    }
+
+    &::after {
+        background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7L8 10L11 7' stroke='%239E9E9E' stroke-width='1.2'/%3E%3C/svg%3E%0A") no-repeat 50% 50% transparent;
+        content: '';
+        height: 100%;
+        left: auto;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+    }
+}

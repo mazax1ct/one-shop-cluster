@@ -1,6 +1,6 @@
 .charges {
     &__form-title {
-        align-items: center;
+        align-items: flex-end;
         color: var(--secondary);
         display: flex;
         flex-wrap: wrap;
@@ -9,39 +9,31 @@
         margin-bottom: 8px;
 
         small {
-            font-size: 11px;
+            font-size: 13px;
 
             &.red {
                 color: #C4334D;
             }
         }
+
+        span {
+            &:nth-child(2) {
+                text-align: right;
+            }
+        }
     }
 
     &__form {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-
-        .input {
-            flex-grow: 1;
-            //ширина кнопки и гэп
-            @media(min-width: $sm) {
-                flex-basis: calc(100% - 198px - 16px);
-            }
-            @media(min-width: $hd) and (max-width: $fhd - 1px) {
-                flex-basis: 100%;
-            }
+        .qnt {
+            margin-bottom: 16px;
         }
 
-        .button {
-            flex-grow: 1;
-            margin-left: auto;
-            @media(min-width: $sm) {
+        & > .button {
+            display: flex;
+            width: 100%;
+            @media(min-width: $lg) {
                 max-width: 198px;
-            }
-            @media(min-width: $hd) and (max-width: $fhd - 1px) {
-                max-width: 100%;
+                margin-left: auto;
             }
         }
     }
@@ -58,11 +50,11 @@
     }
 
     &__value {
-        font-size: 24px;
+        font-size: 26px;
         line-height: 1.66666;
 
         &--big {
-            font-size: 36px;
+            font-size: 38px;
             line-height: 1.33333;
         }
 

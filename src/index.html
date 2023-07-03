@@ -109,25 +109,42 @@
                     <div>
                         <div class="box box--type_1">
                             <div class="box__title-block">
-                                <p class="box__title">Активы в кластере</p>
+                                <p class="box__title">Количество работающих<br> секций кластера</p>
                                 <p class="box__small"><a href="#">Показать подробности</a></p>
                             </div>
                             <div class="charges">
                                 <div class="charge">
-                                    <p class="charge__title">Текущая сумма</p>
-                                    <p class="charge__value charge__value--big">50 000,00 ₽</p>
+                                    <p class="charge__title">Всего</p>
+                                    <p class="charge__value charge__value--big">50</p>
+                                </div>
+
+                                <div class="charge">
+                                    <p class="charge__title">На сумму</p>
+                                    <p class="charge__value charge__value--big">50 000 ₽</p>
                                 </div>
 
                                 <p class="charges__form-title">
                                     <span>Пополнение с реального счета</span>
-                                    <small class="red">Доступно: 24 000,00 ₽</small>
+                                    <span>
+                                        <small>1 секция = 1 000 ₽</small><br>
+                                        <small class="red">Доступно: 24 000 ₽</small>
+                                    </span>
                                 </p>
 
                                 <form class="charges__form" action="">
-                                    <label class="input">
-                                        <input class="input__input error" type="text" placeholder="Введите сумму">
-                                    </label>
-                                    <button class="button button--type_2 button--h_48" type="submit">Добавить в кластер</button>
+                                    <div class="qnt">
+                                        <button class="button button--h_48 button--type_4" type="button">
+                                            -1 000
+                                        </button>
+                                        <label class="input">
+                                            <input class="input__input" type="text" placeholder="0" readonly>
+                                        </label>
+                                        <button class="button button--h_48 button--type_4" type="button">
+                                            +1 000
+                                        </button>
+                                    </div>
+
+                                    <button class="button button--type_2 button--h_48" type="button" data-fancybox="arenda" data-src="#arenda">Аренда секций</button>
                                 </form>
                                 <div class="input-error">Текст ошибки при отправке формы</div>
                                 <div class="input-success">Текст удачной отправки формы</div>
@@ -143,19 +160,19 @@
                             <div class="charges">
                                 <div class="charge">
                                     <p class="charge__title">Начислено за все время</p>
-                                    <p class="charge__value">11 400,00 ₽</p>
+                                    <p class="charge__value">11 400 ₽</p>
                                 </div>
                                 <div class="charge">
                                     <p class="charge__title">Выведено</p>
-                                    <p class="charge__value">8 900,00 ₽</p>
+                                    <p class="charge__value">8 900 ₽</p>
                                 </div>
                                 <div class="charge">
                                     <p class="charge__title">Доступно для вывода</p>
-                                    <p class="charge__value green">2 500,00 ₽</p>
+                                    <p class="charge__value green">2 500 ₽</p>
                                 </div>
 
                                 <form class="charges__form" action="">
-                                    <button class="button button--type_1 button--h_48" type="submit">Вывести средства</button>
+                                    <button class="button button--type_2 button--h_48" type="submit" data-fancybox="request" data-src="#request">Вывести средства</button>
                                 </form>
                             </div>
                         </div>
@@ -324,11 +341,15 @@
     </main>
 
     //= template/footer.html
+
+    //= template/popups/arenda.html
+
+    //= template/popups/request.html
 </body>
 
 
 <script src="js/jquery-3.6.0.min.js"></script>
-
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>

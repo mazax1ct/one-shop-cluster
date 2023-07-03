@@ -1,0 +1,24 @@
+.request {
+    font-weight: 300;
+
+    b {
+        font-weight: 400;
+    }
+
+    .checkbox,
+    .select {
+        margin-bottom: 24px;
+    }
+
+    &__buttons-block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: flex-end;
+
+        .button {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+}

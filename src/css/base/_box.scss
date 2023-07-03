@@ -23,12 +23,21 @@
         }
     }
 
+    &.fancybox-content {
+        @include scrollbar;
+        max-width: 700px;
+        width: 100%;
+    }
+
     &__title-block {
         align-items: center;
         display: flex;
         flex-wrap: wrap;
         gap: var(--base_gap);
         justify-content: space-between;
+        @media(min-width: $lg) {
+            gap: calc(var(--base_gap) / 2);
+        }
 
         &:not(:last-child) {
             margin-bottom: calc(var(--base_gap) * 2);
@@ -43,12 +52,12 @@
     }
 
     &__title {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.25;
     }
 
     &__small {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 1.53846;
     }
 
