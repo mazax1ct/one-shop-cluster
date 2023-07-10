@@ -23,9 +23,16 @@
         }
     }
 
+    &--type_2 {
+        max-width: 700px;
+    }
+
+    &--type_3 {
+        max-width: 512px;
+    }
+
     &.fancybox-content {
         @include scrollbar;
-        max-width: 700px;
         width: 100%;
     }
 

@@ -1,12 +1,28 @@
-<div id="arenda" class="box" style="display: none">
+<div id="arenda" class="box box--type_3" style="display: none">
+    <div class="box__title-block">
+        <p class="box__title">Подтверждение аренды секций</p>
+    </div>
+    <div class="arenda">
+        <p class="arenda__text">Вы собираетесь арендовать <span class="red">5 секций</span> на сумму</p>
+        <p class="arenda__value red">5 000 ₽</p>
+
+        <div class="arenda__button-block">
+            <button class="button button--type_7 button--h_48" type="button" onclick="$.fancybox.close();">Отмена</button>
+            <button class="button button--type_6 button--h_48" type="button" onclick="$.fancybox.open($('#arenda_2'));">Продолжить</button>
+        </div>
+    </div>
+</div>
+
+<div id="arenda_2" class="box box--type_3" style="display: none">
     <div class="box__title-block">
         <p class="box__title">Транзакция прошла успешно</p>
     </div>
     <div class="arenda">
-        <p class="arenda__title">Вы успешно арендовали <span>5</span> секций!</p>
+        <p class="arenda__text">Вы успешно арендовали</p>
+        <p class="arenda__value green">5 секций</p>
 
         <div class="arenda__button-block">
-            <button class="button button--type_2 button--h_48" type="button" onclick="$.fancybox.close();">Отлично!</button>
+            <button class="button button--type_6 button--h_48" type="button" onclick="$.fancybox.close();">Отлично!</button>
         </div>
     </div>
 </div>

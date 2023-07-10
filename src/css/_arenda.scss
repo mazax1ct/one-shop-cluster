@@ -1,25 +1,23 @@
 .arenda {
-    &__title {
-        font-size: 26px;
+    &__text {
         font-weight: 300;
-        line-height: 1;
-        margin-bottom: 48px;
-        text-align: center;
+    }
 
-        span {
-            color: var(--brand_green);
-            font-size: 76px;
-            font-weight: 900;
-            display: block;
-            margin: 24px auto;
-        }
+    &__value {
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 1.26315;
     }
 
     &__button-block {
-        text-align: right;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
 
         .button {
-            min-width: 134px;
+            padding-left: 32px;
+            padding-right: 32px;
         }
     }
 }

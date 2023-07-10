@@ -2,6 +2,7 @@ $.fancybox.defaults.hash = false;
 $.fancybox.defaults.smallBtn = false;
 $.fancybox.defaults.toolbar = false;
 $.fancybox.defaults.touch = false;
+$.fancybox.defaults.closeExisting = true;
 
 //меню
 $(document).on('click', '.js-menu-opener', function () {

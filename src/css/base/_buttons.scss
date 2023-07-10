@@ -105,4 +105,12 @@
     &--type_5 {
         background-color: var(--brand_red);
     }
+
+    &--type_6 {
+        background: radial-gradient(64.80% 50.00% at 50.28% -0.00%, rgba(235, 229, 98, 0.80) 0%, rgba(102, 235, 42, 0.00) 100%), linear-gradient(180deg, #5D9444 41.67%, #58A834 100%);
+    }
+
+    &--type_7 {
+        background: radial-gradient(64.80% 50.00% at 50.28% -0.00%, rgba(236, 101, 125, 0.80) 0%, rgba(238, 41, 76, 0.00) 100%), linear-gradient(180deg, #9D4A59 41.67%, #B4374E 100%), #C4334D;
+    }
 }

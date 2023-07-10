@@ -1,0 +1,22 @@
+.history-list {
+    @media(min-width: $hd) {
+        display: flex;
+        height: calc(100vh - 154px);
+    }
+
+    & > .box {
+        @media(min-width: $hd) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .history-table-wrapper {
+            @media(min-width: $hd) {
+                @include scrollbar;
+                flex-grow: 1;
+                overflow-y: auto;
+            }
+        }
+    }
+}
