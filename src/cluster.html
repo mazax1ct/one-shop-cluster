@@ -59,58 +59,84 @@
 
                 <div class="box box--type_1">
                     <div class="box__title-block">
-                        <p class="box__title">Личный доход</p>
-                        <p class="box__title grey">50 000,00 ₽ <span class="green">4,0%</span></p>
+                        <p class="box__title">Прогнозирование нейробота</p>
                     </div>
 
-                    <div class="qualify-cards">
-                        <div class="qualify-card green">
-                            <p class="qualify-card__title">1 000—50 000 ₽</p>
-                            <p class="qualify-card__value">+4%</p>
+                    <div class="forecast">
+                        <div class="forecast__columns">
+                            <div class="forecast__column">
+                                <form action="">
+                                    <div class="forecast__item">
+                                        <p class="field-title">Количество секций</p>
+
+                                        <label class="input">
+                                            <input class="input__input" type="text" value="50">
+                                        </label>
+                                    </div>
+
+                                    <div class="forecast__item">
+                                        <p class="field-title">Число людей в кластере</p>
+
+                                        <label class="input">
+                                            <input class="input__input" type="text" value="50">
+                                        </label>
+                                    </div>
+
+                                    <div class="forecast__item">
+
+                                        <p class="field-title">Квалификация</p>
+
+                                        <label class="select">
+                                            <select>
+                                                <option value="">Директор</option>
+                                                <option value="">Не директор</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="forecast__column">
+                                <div class="forecast__item">
+                                    <p class="field-title">Количество секций</p>
+
+                                    <div class="graph-bar graph-bar--type_1">
+                                        <!--размер бара передаём в таком виде-->
+                                        <div class="graph-bar__bar" style="width: 97%"></div>
+                                        <div class="graph-bar__value">4%</div>
+                                    </div>
+                                </div>
+
+                                <div class="forecast__item">
+                                    <p class="field-title">Процент кластерного дохода</p>
+
+                                    <div class="graph-bar graph-bar--type_2">
+                                        <div class="graph-bar__bar" style="width: 50%"></div>
+                                        <div class="graph-bar__value">8,88%</div>
+                                    </div>
+                                </div>
+
+                                <div class="forecast__item">
+                                    <p class="field-title">Процент квалификационного дохода</p>
+
+                                    <div class="graph-bar graph-bar--type_3">
+                                        <div class="graph-bar__bar" style="width: 50%"></div>
+                                        <div class="graph-bar__value">5%</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">51 000—100 000 ₽</p>
-                            <p class="qualify-card__value">+1%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">101 000—200 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">201 000—300 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">301 000—400 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">401 000—500 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">501 000—600 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">601 000—700 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">701 000—800 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">801 000—900 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">901 000—1 000 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">1 001 000—1 100 000 ₽</p>
-                            <p class="qualify-card__value">+0,5%</p>
+                        <div class="forecast__results">
+                            <div class="forecast__result">
+                                <p class="forecast__result-title">Начисления за 11 месяцев</p>
+                                <p class="forecast__result-value">8 940,00 ₽</p>
+                            </div>
+
+                            <div class="forecast__result">
+                                <p class="forecast__result-title">Совокупный процент</p>
+                                <p class="forecast__result-value">17,88%</p>
+                            </div>
+
+                            <button class="button button--type_6" type="button">Рассчитать результат</button>
                         </div>
                     </div>
                 </div>
@@ -575,6 +601,64 @@
                         <div></div>
                         <div></div>
                         <div></div>
+                    </div>
+                </div>
+
+                <div class="box box--type_1">
+                    <div class="box__title-block">
+                        <p class="box__title">Личный доход</p>
+                        <p class="box__title grey">50 000,00 ₽ <span class="green">4,0%</span></p>
+                    </div>
+
+                    <div class="qualify-cards">
+                        <div class="qualify-card green">
+                            <p class="qualify-card__title">1 000—50 000 ₽</p>
+                            <p class="qualify-card__value">+4%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">51 000—100 000 ₽</p>
+                            <p class="qualify-card__value">+1%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">101 000—200 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">201 000—300 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">301 000—400 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">401 000—500 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">501 000—600 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">601 000—700 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">701 000—800 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">801 000—900 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">901 000—1 000 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
+                        <div class="qualify-card">
+                            <p class="qualify-card__title">1 001 000—1 100 000 ₽</p>
+                            <p class="qualify-card__value">+0,5%</p>
+                        </div>
                     </div>
                 </div>
 

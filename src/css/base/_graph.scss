@@ -1,0 +1,72 @@
+.graph-bar {
+    border-radius: 12px;
+    border: 1px solid var(--light_grey);
+    background-color: #FBFBFB;
+    font-size: 20px;
+    font-weight: 400;
+    height: 48px;
+    line-height: 1.6;
+    position: relative;
+    z-index: auto;
+
+    &--type_1 {
+        .graph-bar__bar {
+            background-color: #B8F3C9;
+            box-shadow: 0 0 0 1px rgba(#2B5634, 0.4);
+        }
+
+        .graph-bar__value {
+            color: #2B5634;
+        }
+    }
+
+    &--type_2 {
+        .graph-bar__bar {
+            background-color: #B8C5F3;
+            box-shadow: 0 0 0 1px rgba(#3E5090, 0.4);
+        }
+
+        .graph-bar__value {
+            color: #2B5634;
+        }
+    }
+
+    &--type_3 {
+        .graph-bar__bar {
+            background-color: #F3F1B8;
+            box-shadow: 0 0 0 1px rgba(#56552B, 0.2);
+        }
+
+        .graph-bar__value {
+            color: #56552B;
+        }
+    }
+
+    &__bar {
+        border-radius: 12px 0 0 12px;
+        box-shadow: 0 0 1px 1px var(--light_grey);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        &[style="width: 97%"],
+        &[style="width: 98%"],
+        &[style="width: 99%"],
+        &[style="width: 100%"] {
+            border-radius: 12px;
+        }
+    }
+
+    &__value {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        padding-left: 16px;
+        top: 0;
+        z-index: 2;
+    }
+}
