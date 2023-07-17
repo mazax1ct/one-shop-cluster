@@ -51,10 +51,14 @@
         top: 0;
         z-index: 1;
 
-        &[style="width: 97%"],
-        &[style="width: 98%"],
-        &[style="width: 99%"],
-        &[style="width: 100%"] {
+        &[style="width: 0%;"] {
+            display: none;
+        }
+
+        &[style="width: 97%;"],
+        &[style="width: 98%;"],
+        &[style="width: 99%;"],
+        &[style="width: 100%;"] {
             border-radius: 12px;
         }
     }

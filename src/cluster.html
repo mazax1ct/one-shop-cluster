@@ -62,47 +62,48 @@
                         <p class="box__title">Прогнозирование нейробота</p>
                     </div>
 
-                    <div class="forecast">
+                    <form class="forecast">
                         <div class="forecast__columns">
-                            <div class="forecast__column">
-                                <form action="">
-                                    <div class="forecast__item">
-                                        <p class="field-title">Количество секций</p>
-
-                                        <label class="input">
-                                            <input class="input__input" type="text" value="50">
-                                        </label>
-                                    </div>
-
-                                    <div class="forecast__item">
-                                        <p class="field-title">Число людей в кластере</p>
-
-                                        <label class="input">
-                                            <input class="input__input" type="text" value="50">
-                                        </label>
-                                    </div>
-
-                                    <div class="forecast__item">
-
-                                        <p class="field-title">Квалификация</p>
-
-                                        <label class="select">
-                                            <select>
-                                                <option value="">Директор</option>
-                                                <option value="">Не директор</option>
-                                            </select>
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
                             <div class="forecast__column">
                                 <div class="forecast__item">
                                     <p class="field-title">Количество секций</p>
 
+                                    <label class="input">
+                                        <input id="sections_qnt" class="js-number-mask input__input" type="text" value="0">
+                                    </label>
+                                </div>
+
+                                <div class="forecast__item">
+                                    <p class="field-title">Число людей в кластере <small class="red">(макс. 10000)*</small></p>
+
+                                    <label class="input">
+                                        <input id="cluster_members" class="js-number-mask input__input" type="text" value="0" data-inputmask-max="10000">
+                                    </label>
+                                </div>
+
+                                <div class="forecast__item">
+                                    <p class="field-title">Квалификация</p>
+                                    <label class="select">
+                                        <select id="qualify">
+                                            <option value="0.5">Консультант</option>
+                                            <option value="1">Менеджер</option>
+                                            <option value="1.5">Ведущий специалист</option>
+                                            <option value="2">Вице директор</option>
+                                            <option value="5">Директор</option>
+                                            <option value="5">Серебряный директор</option>
+                                            <option value="6">Золотой директор</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="forecast__column">
+                                <div class="forecast__item">
+                                    <p class="field-title">Процент личного дохода</p>
+
                                     <div class="graph-bar graph-bar--type_1">
                                         <!--размер бара передаём в таком виде-->
-                                        <div class="graph-bar__bar" style="width: 97%"></div>
-                                        <div class="graph-bar__value">4%</div>
+                                        <div id="self_percent" class="graph-bar__bar" style="width: 0%;"></div>
+                                        <div class="graph-bar__value"><span id="self_percent_val">0</span>%</div>
                                     </div>
                                 </div>
 
@@ -110,8 +111,8 @@
                                     <p class="field-title">Процент кластерного дохода</p>
 
                                     <div class="graph-bar graph-bar--type_2">
-                                        <div class="graph-bar__bar" style="width: 50%"></div>
-                                        <div class="graph-bar__value">8,88%</div>
+                                        <div id="cluster_percent" class="graph-bar__bar" style="width: 0%;"></div>
+                                        <div class="graph-bar__value"><span id="cluster_percent_val">0</span>%</div>
                                     </div>
                                 </div>
 
@@ -119,8 +120,8 @@
                                     <p class="field-title">Процент квалификационного дохода</p>
 
                                     <div class="graph-bar graph-bar--type_3">
-                                        <div class="graph-bar__bar" style="width: 50%"></div>
-                                        <div class="graph-bar__value">5%</div>
+                                        <div id="qualify_percent" class="graph-bar__bar" style="width: 0%;"></div>
+                                        <div class="graph-bar__value"><span id="qualify_percent_val">0</span>%</div>
                                     </div>
                                 </div>
                             </div>
@@ -128,17 +129,17 @@
                         <div class="forecast__results">
                             <div class="forecast__result">
                                 <p class="forecast__result-title">Начисления за 11 месяцев</p>
-                                <p class="forecast__result-value">8 940,00 ₽</p>
+                                <p class="forecast__result-value"><span id="res">0</span> ₽</p>
                             </div>
 
                             <div class="forecast__result">
                                 <p class="forecast__result-title">Совокупный процент</p>
-                                <p class="forecast__result-value">17,88%</p>
+                                <p class="forecast__result-value"><span id="res_2">0</span>%</p>
                             </div>
 
-                            <button class="button button--type_6" type="button">Рассчитать результат</button>
+                            <button id="calc" class="button button--type_6" type="button">Рассчитать результат</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
@@ -687,27 +688,16 @@
                         </div>
                         <div class="qualify-card yellow">
                             <p class="qualify-card__title">Директор</p>
-                            <p class="qualify-card__value">+2,5%</p>
+                            <p class="qualify-card__value">+3%</p>
                         </div>
                         <div class="qualify-card">
                             <p class="qualify-card__title">Серебряный директор</p>
-                            <p class="qualify-card__value">+0,5%</p>
+                            <p class="qualify-card__value">+0%</p>
                         </div>
+
                         <div class="qualify-card">
                             <p class="qualify-card__title">Золотой директор</p>
-                            <p class="qualify-card__value">+1,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">Сапфировый директор</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">Изумрудный директор</p>
-                            <p class="qualify-card__value">+0,5%</p>
-                        </div>
-                        <div class="qualify-card">
-                            <p class="qualify-card__title">Бриллиант. директор</p>
-                            <p class="qualify-card__value">+2,5%</p>
+                            <p class="qualify-card__value">+1%</p>
                         </div>
                     </div>
                 </div>
@@ -721,6 +711,9 @@
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
+<script src="js/inputmask-init.js"></script>
+<script src="js/jquery.inputmask.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/forecast.js"></script>
 
 </html>

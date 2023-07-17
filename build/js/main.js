@@ -17,7 +17,6 @@ $(document).on('click', '.js-menu-closer', function () {
   return false;
 });
 
-
 //аккордион
 $(document).on('click', '.accordion__toggler', function () {
   $(this).closest('.accordion').toggleClass('is-open');
