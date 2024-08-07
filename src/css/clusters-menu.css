@@ -1,0 +1,42 @@
+.clusters-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.clusters-menu .box {
+  border: 1px solid var(--box_bg);
+  color: var(--darker);
+  flex-grow: 1;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+@media(min-width: 768px) {
+  .clusters-menu .box {
+    width: calc(100% / 2 - 10px / 2);
+  }
+}
+
+.clusters-menu .box:hover {
+  background-color: #f6f7f9;
+  border-color: var(--light_grey);
+}
+
+.clusters-menu .box.is-active {
+  border-color: var(--brand_green);
+  background-color: var(--brand_green);
+  border-color: var(--brand_green);
+  color: #fff;
+}
+
+.clusters-menu .box .box__title {
+  font-size: 15px;
+}
+
+.clusters-menu .box .box__title span {
+  white-space: nowrap;
+}
+
+.clusters-menu .box .box__small {
+  font-size: 14px;
+}

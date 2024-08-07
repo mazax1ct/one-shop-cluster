@@ -8,6 +8,10 @@ function clusterInit () {
   var max_limit_cluster_members = 10000,
       max_limit_cluster_percent = 10;
 
+  if($('#cluster_members').val() > parseInt($('#cluster_members').attr('data-max'))) {
+      $('#cluster_members').val(parseInt($('#cluster_members').attr('data-max')));
+  }
+
   var cluster_percent = ($('#cluster_members').val() / max_limit_cluster_members * 100);
 
   $('#cluster_percent').css('width', cluster_percent + '%');
@@ -119,11 +123,11 @@ $(document).ready(function() {
   $('#cluster_members').val('0');
 });
 
-$(document).on('change', '#sections_qnt', function () {
+$(document).on('change, keyup', '#sections_qnt', function () {
   sectionsInit();
 });
 
-$(document).on('change', '#cluster_members', function () {
+$(document).on('change, keyup', '#cluster_members', function () {
   clusterInit();
 });
 
